@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo App</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
   </head>
   <body>
     <h1>todos</h1>
-    <form action="#" id="form">
+    <form id="form">
       <input
         type="text"
         id="input"
         class="input"
         placeholder="Enter your todo"
+        autocomplete="off"
       />
+      <ul class="todos" id="todos"></ul>
     </form>
+    <small
+      >*Left click to mark as complete </br>*Right click to delete the todo</small
+    >
+    <script src="main.js"></script>
   </body>
 </html>
