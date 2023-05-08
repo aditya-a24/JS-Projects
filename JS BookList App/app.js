@@ -9,7 +9,7 @@ class Book {
 
 // UI Class: Handles UI Tasks
 class UI {
-    static displayBooks() {
+    static displayBooks() { // Static methods are called directly on the class 
         const StoredBooks = [
             {
                 title: 'Book One',
@@ -28,7 +28,7 @@ class UI {
         books.forEach((book) => UI.addBookToList(book));
     }
 
-    static addBookToList(book) {
+    static addBookToList(book) { // Static methods are called directly on the class 
         const list = document.querySelector('#book-list');
 
         const row = document.createElement('tr');
@@ -43,12 +43,22 @@ class UI {
         list.appendChild(row);
     }
 
-    static clearFields() {
+    static deleteBook(el) {
+        if(el.classList.contains('delete')) {
+            el.parentElement.parentEleme nt.remove();
+        }
+    }
+
+    static clearFields() { // Static methods are called directly on the class 
         document.querySelector('#title').value = '';
         document.querySelector('#author').value = '';
         document.querySelector('#isbn').value = '';
     }
 }
+
+
+
+
 
 // Store Class: Handles Storage
 
@@ -76,3 +86,6 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 });
 
 // Event: Remove a Book
+document.querySelector('#book-list').addEventListener('click', (e) => {
+    UI.deleteBook(e.target)
+});
