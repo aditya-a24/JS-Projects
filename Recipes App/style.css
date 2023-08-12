@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&family=Ubuntu&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #ECE9E6;
+    background: -webkit-linear-gradient(to left, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to left, #FFFFFF, #ECE9E6);
+
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+.mobile-container {
+    background-color: #fff;
+    width: 400px;
+    box-shadow: 0 0 10px 2px #3333331a;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+header input {
+
+    background-color: #eee;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    border: none;
+}
+
+header button {
+    background-color: transparent;
+    color: #aaa;
+    border: none;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.fav-container {
+    padding: 1rem;
+    text-align: center;
+    background-color: rgb(144, 101, 223);
+}
+
+.fav-meals {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.fav-meals li {
+    margin: 5px;
+    width: 75px;
+}
+
+.fav-meals li img {
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px #3333331a;
+    object-fit: cover;
+    /* The CSS object-fit property is used to specify how an <img> or <video> should be resized to fit its container. */
+    height: 70px;
+    width: 70px;
+}
+
+.fav-meals li span {
+    font-size: 0.8rem;
+}
